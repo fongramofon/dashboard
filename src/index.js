@@ -4,10 +4,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { createStore, applyMiddleware, compose } from 'redux';
-import employeeListReducer from './store/reducers/employeeListReducer';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+// import employeeListReducer from './store/reducers/employeeListReducer';
+import { reducer as formReducer } from 'redux-form';
+import dashboardReducer from './store/reducers/dashboardReducer';
 import createSagaMiddleware from 'redux-saga';
-import { watchFetchEmployees } from './store/sagas';
+import { watchGetDashboardData } from './store/sagas';
 
 import './index.css';
 import App from './App';
@@ -20,11 +22,16 @@ const composeEnhancers =
 
 const sagaMiddleware = createSagaMiddleware();
 
-const store = createStore(employeeListReducer,
+const rootReducer = combineReducers({
+    dashboard: dashboardReducer,
+    form: formReducer
+})
+
+const store = createStore(rootReducer,
   composeEnhancers(applyMiddleware(sagaMiddleware))
 );
 
-sagaMiddleware.run(watchFetchEmployees);
+sagaMiddleware.run(watchGetDashboardData);
 
 const app = (
   <Provider store={store}>

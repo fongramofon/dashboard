@@ -4,7 +4,8 @@ import asyncComponent from './components/AsyncComponent';
 import './App.css';
 
 import Layout from './containers/Layout/Layout';
-import EmployeeList from './containers/EmployeeList/EmployeeList';
+import Dashboard from './containers/Dashboard/Dashboard';
+import Survey from './containers/Survey/Survey';
 const AsyncAbout = asyncComponent(() => import('./containers/About/About'));
 
 class App extends Component {
@@ -14,7 +15,8 @@ class App extends Component {
         <Layout>
           <Switch>
             <Route path="/about" component={AsyncAbout}></Route>
-            <Route path="/" exact component={EmployeeList}></Route>
+            <Route path="/survey" component={Survey}></Route>
+            <Route path="/" exact component={Dashboard}></Route>
             <Redirect to="/"/>
           </Switch>
         </Layout>

@@ -26,5 +26,8 @@ const reducer = (state = initialState, action) => {
     case actionTypes.GET_DASHBOARD_DATA_START : return getDashboardDataStart(state, action);
     case actionTypes.GET_DASHBOARD_DATA_SUCCESS : return getDashboardDataSuccess(state, action);
     case actionTypes.GET_DASHBOARD_DATA_FAIL : return getDashboardDataFail(state, action);
+    default : return state;
   }
 }
+
+export default reducer;
