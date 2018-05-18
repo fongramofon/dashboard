@@ -1,0 +1,15 @@
+@import '../../base/vars.css';
+
+.wrapper {
+  padding-top: 20px;
+  width: 100%;
+}
+
+.container {
+  padding: 10px 40px 30px 40px;
+  background: var(--tertiaryBgColor);
+}
+
+.paragraph {
+  margin: auto;
+}

@@ -1,0 +1,39 @@
+@import '../../base/vars.css';
+
+.header {
+  height: var(--header-height);
+  width: 100%;
+  background-color: var(--primaryBgColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+	width: 25px;
+	height: 25px;
+  background: var(--tertiaryBgColor);
+  left: 5px;
+  border-radius: 100%;
+  position: relative;
+  border: 10px solid var(--primaryBgColor);
+  outline: 5px solid var(--tertiaryBgColor);
+}
+
+.navLink {
+  text-transform: uppercase;
+  color: var(--secondaryColor);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.active {
+  border-bottom: 3px solid var(--secondaryBorderColor);
+}

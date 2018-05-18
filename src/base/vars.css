@@ -1,0 +1,24 @@
+:root {
+  /* background-color */
+  --primaryBgColor: #333333;
+  --secondaryBgColor: #e6e6e6;
+  --tertiaryBgColor: #fff;
+  --quartenaryBgColor: #40e0d0;
+
+  /* border-color */
+
+  --primaryBorderColor: #d9d9d9;
+  --secondaryBorderColor: #fff;
+
+  /* font-color */
+
+  --primaryColor: #333333;
+  --secondaryColor: #fff;
+  --tertiaryColor: #aaa;
+
+  /* header-height */
+  --header-height: 100px;
+}
+
+
+
