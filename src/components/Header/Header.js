@@ -9,13 +9,22 @@ export const header = props => (
       <Link to="/">
         <div className={classes.logo}></div>
       </Link>
-      <NavLink 
-        to="/about" 
-        className={classes.navLink}
-        activeClassName={classes.active}
-      >
-        About
-      </NavLink>
+      <nav>
+        <NavLink 
+          to="/about" 
+          className={classes.navLink}
+          activeClassName={classes.active}
+        >
+          About
+        </NavLink>
+        <NavLink 
+          to="/survey" 
+          className={classes.navLink}
+          activeClassName={classes.active}
+        >
+          Survey
+        </NavLink>
+      </nav>
     </div>
   </header>
 );
