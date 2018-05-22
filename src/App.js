@@ -15,6 +15,7 @@ class App extends Component {
         <Layout>
           <Switch>
             <Route path="/about" component={AsyncAbout}></Route>
+            <Route path="/about" component={AsyncAbout}></Route>
             <Route path="/survey" component={Survey}></Route>
             <Route path="/" exact component={Dashboard}></Route>
             <Redirect to="/"/>
